@@ -1,0 +1,74 @@
+OpenROAD 26Q2-1164-g08f67ee5ec 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 12 thread(s).
+read_liberty /opt/orfs/flow/platforms/gf180/lib/gf180mcu_fd_sc_mcu9t5v0__ff_n40C_5v50.lib.gz
+read_db /work/results/gf180/uart-blocks_uart_rx/base/6_1_fill.odb
+read_sdc /work/results/gf180/uart-blocks_uart_rx/base/6_1_fill.sdc
+source /opt/orfs/flow/platforms/gf180/setRC.tcl
+[WARNING STA-0450] virtual clock vclk_clk can not be propagated.
+write_db /work/results/gf180/uart-blocks_uart_rx/base/6_final.odb
+Deleted 0 routing obstructions
+[INFO RCX-0431] Defined process_corner X with ext_model_index 0
+[INFO RCX-0029] Defined extraction corner X
+[INFO RCX-0435] Reading extraction model file /opt/orfs/flow/platforms/gf180/openROAD/rcx/gf180mcu_1p5m_1tm_9k_sp_smim_OPTB_bst.rules ...
+[INFO RCX-0436] RC segment generation uart_rx (max_merge_res 50.0) ...
+[INFO RCX-0040] Final 1299 rc segments
+[INFO RCX-0439] Coupling Cap extraction uart_rx ...
+[INFO RCX-0440] Coupling threshhold is 0.1000 fF, coupling capacitance less than 0.1000 fF will be grounded.
+[INFO RCX-0442] 46% of 2671 wires extracted
+[INFO RCX-0442] 100% of 2671 wires extracted
+[INFO RCX-0045] Extract 361 nets, 1657 rsegs, 1657 caps, 2677 ccs
+[INFO RCX-0443] 361 nets finished
+[INFO PSM-0040] All shapes on net VDD are connected.
+[INFO PSM-0073] Using bump pattern with x-pitch 140.0000um, y-pitch 140.0000um, and size 70.0000um with an reduction factor of 3x.
+########## IR report #################
+Net              : VDD
+Corner           : default
+Total power      : 4.23e-02 W
+Supply voltage   : 5.50e+00 V
+Worstcase voltage: 5.50e+00 V
+Average voltage  : 5.50e+00 V
+Average IR drop  : 4.54e-04 V
+Worstcase IR drop: 9.01e-04 V
+Percentage drop  : 0.02 %
+######################################
+[INFO PSM-0040] All shapes on net VSS are connected.
+[INFO PSM-0073] Using bump pattern with x-pitch 140.0000um, y-pitch 140.0000um, and size 70.0000um with an reduction factor of 3x.
+########## IR report #################
+Net              : VSS
+Corner           : default
+Total power      : 4.23e-02 W
+Supply voltage   : 0.00e+00 V
+Worstcase voltage: 7.60e-04 V
+Average voltage  : 4.61e-04 V
+Average IR drop  : 4.61e-04 V
+Worstcase IR drop: 7.60e-04 V
+Percentage drop  : 0.01 %
+######################################
+Cell type report:                       Count       Area
+  Endcap cell                              82     462.87
+  Fill cell                               755   28167.55
+  Tap cell                                 43     242.73
+  Clock buffer                              7     344.33
+  Timing Repair Buffer                     31    1312.42
+  Inverter                                 16     270.95
+  Clock inverter                            1      22.58
+  Sequential cell                          44    3725.57
+  Multi-Input combinational cell          239    9308.28
+  Total                                  1218   43857.27
+Report metrics stage 6, finish...
+
+==========================================================================
+finish report_design_area
+--------------------------------------------------------------------------
+Design area 15690 um^2 36% utilization.
+[WARNING GUI-0076] QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-designer'
+amdgpu: os_same_file_description couldn't determine if two DRM fds reference the same file description.
+If they do, bad things may happen!
+[WARNING GUI-0066] Heat map "IR Drop" has not been populated with data.
+[WARNING GUI-0066] Heat map "Routing Congestion" has not been populated with data.
+Elapsed time: 0:01.40[h:]min:sec. CPU time: user 1.38 sys 0.27 (117%). Peak memory: 273028KB.
+Log                       Ext     Elapsed/s Peak Memory/MB sha1sum result [0:20)
+6_report                                  1            266                  N/A

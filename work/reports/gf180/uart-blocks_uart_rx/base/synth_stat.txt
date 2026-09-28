@@ -1,0 +1,63 @@
+Found gzip magic in file `/opt/orfs/flow/platforms/gf180/lib/gf180mcu_fd_sc_mcu9t5v0__ff_n40C_5v50.lib.gz', decompressing using zlib.
+
+20. Printing statistics.
+
+=== uart_rx ===
+
+        +----------------------------Count including submodules.
+        |        +-------------------Area including submodules.
+        |        |        +----------Local count, excluding submodules.
+        |        |        |        +-Local area, excluding submodules.
+        |        |        |        | 
+      310        -      310        - wires
+      332        -      332        - wire bits
+       42        -       42        - public wires
+       64        -       64        - public wire bits
+       10        -       10        - ports
+       32        -       32        - port bits
+        -        -        -        - memories
+        -        -        -        - memory bits
+        -        -        -        - processes
+      306 1.35E+04      306 1.35E+04 cells
+        6  287.885        6  287.885   gf180mcu_fd_sc_mcu9t5v0__addh_1
+       33  838.253       33  838.253   gf180mcu_fd_sc_mcu9t5v0__and2_2
+        1   47.981        1   47.981   gf180mcu_fd_sc_mcu9t5v0__and2_4
+        6  186.278        6  186.278   gf180mcu_fd_sc_mcu9t5v0__and3_2
+        5  183.456        5  183.456   gf180mcu_fd_sc_mcu9t5v0__and4_2
+        7  335.866        7  335.866   gf180mcu_fd_sc_mcu9t5v0__aoi211_2
+        9  330.221        9  330.221   gf180mcu_fd_sc_mcu9t5v0__aoi21_2
+        1    59.27        1    59.27   gf180mcu_fd_sc_mcu9t5v0__aoi221_2
+        8  361.267        8  361.267   gf180mcu_fd_sc_mcu9t5v0__aoi22_2
+        2   45.158        2   45.158   gf180mcu_fd_sc_mcu9t5v0__buf_2
+        2   79.027        2   79.027   gf180mcu_fd_sc_mcu9t5v0__buf_4
+        2   45.158        2   45.158   gf180mcu_fd_sc_mcu9t5v0__clkbuf_2
+        1   73.382        1   73.382   gf180mcu_fd_sc_mcu9t5v0__clkbuf_8
+       16   270.95       16   270.95   gf180mcu_fd_sc_mcu9t5v0__clkinv_2
+       44 3.73E+03       44 3.73E+03   gf180mcu_fd_sc_mcu9t5v0__dffq_2
+       21  889.056       21  889.056   gf180mcu_fd_sc_mcu9t5v0__mux2_2
+       17  431.827       17  431.827   gf180mcu_fd_sc_mcu9t5v0__nand2_2
+        5  183.456        5  183.456   gf180mcu_fd_sc_mcu9t5v0__nand3_2
+        1    70.56        1    70.56   gf180mcu_fd_sc_mcu9t5v0__nand3_4
+        2   90.317        2   90.317   gf180mcu_fd_sc_mcu9t5v0__nand4_2
+        1   87.494        1   87.494   gf180mcu_fd_sc_mcu9t5v0__nand4_4
+       17  479.808       17  479.808   gf180mcu_fd_sc_mcu9t5v0__nor2_2
+        3  118.541        3  118.541   gf180mcu_fd_sc_mcu9t5v0__nor3_2
+        1   73.382        1   73.382   gf180mcu_fd_sc_mcu9t5v0__nor3_4
+        4  203.213        4  203.213   gf180mcu_fd_sc_mcu9t5v0__nor4_2
+        5  239.904        5  239.904   gf180mcu_fd_sc_mcu9t5v0__oai211_2
+        6  237.082        6  237.082   gf180mcu_fd_sc_mcu9t5v0__oai21_2
+        2  124.186        2  124.186   gf180mcu_fd_sc_mcu9t5v0__oai221_2
+       11  558.835       11  558.835   gf180mcu_fd_sc_mcu9t5v0__oai22_2
+        4  203.213        4  203.213   gf180mcu_fd_sc_mcu9t5v0__oai31_2
+       11  310.464       11  310.464   gf180mcu_fd_sc_mcu9t5v0__or2_2
+       10  338.688       10  338.688   gf180mcu_fd_sc_mcu9t5v0__or3_2
+        1   62.093        1   62.093   gf180mcu_fd_sc_mcu9t5v0__or3_4
+       12  474.163       12  474.163   gf180mcu_fd_sc_mcu9t5v0__or4_2
+        3  220.147        3  220.147   gf180mcu_fd_sc_mcu9t5v0__or4_4
+       17  815.674       17  815.674   gf180mcu_fd_sc_mcu9t5v0__xnor2_2
+        3  177.811        3  177.811   gf180mcu_fd_sc_mcu9t5v0__xnor2_4
+        6  287.885        6  287.885   gf180mcu_fd_sc_mcu9t5v0__xor2_2
+
+   Chip area for module '\uart_rx': 13547.520000
+     of which used for sequential elements: 3725.568000 (27.50%)
+

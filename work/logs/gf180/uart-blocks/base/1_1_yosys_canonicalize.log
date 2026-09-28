@@ -1,0 +1,27 @@
+Yosys 0.64 (git sha1 8449dd470, g++ 13.3.0-6ubuntu2~24.04.1 -fPIC -O3) [the-openroad-project/yosys]
+Using ABC speed script.
+Extracting clock period from SDC file: /work/results/gf180/uart-blocks/base/clock_period.txt
+Setting clock period to 6
+1. Executing Liberty frontend: /opt/orfs/flow/platforms/gf180/lib/gf180mcu_fd_sc_mcu9t5v0__ff_n40C_5v50.lib.gz
+2. Executing Liberty frontend: /work/results/gf180/uart-blocks_uart_rx/base/uart_rx_typ.lib
+3. Executing Liberty frontend: /opt/orfs/flow/platforms/gf180/lib/gf180mcu_fd_sc_mcu9t5v0__ff_n40C_5v50.lib.gz
+4. Executing Liberty frontend: /work/results/gf180/uart-blocks_uart_rx/base/uart_rx_typ.lib
+5. Executing Verilog-2005 frontend: /opt/orfs/flow/designs/src/uart-no-param/uart.v
+6. Executing Verilog-2005 frontend: /opt/orfs/flow/designs/src/uart-no-param/uart_rx.v
+7. Executing Verilog-2005 frontend: /opt/orfs/flow/designs/src/uart-no-param/uart_tx.v
+8. Executing HIERARCHY pass (managing design hierarchy).
+9. Executing AST frontend in derive mode using pre-parsed AST for module `\uart'.
+9.1. Analyzing design hierarchy..
+9.2. Executing AST frontend in derive mode using pre-parsed AST for module `\uart_tx'.
+9.3. Analyzing design hierarchy..
+9.4. Analyzing design hierarchy..
+10. Executing OPT_CLEAN pass (remove unused cells and wires).
+Warning: Ignoring module uart_tx because it contains processes (run 'proc' command first).
+11. Executing RTLIL backend.
+Warnings: 1 unique messages, 1 total
+End of script. Logfile hash: 6ab4b1c73f, time: 0.22s, user: 0.19s, system: 0.01s, MEM: 66.22 MB peak
+Yosys 0.64 (git sha1 8449dd470, g++ 13.3.0-6ubuntu2~24.04.1 -fPIC -O3) [the-openroad-project/yosys]
+Time spent: 95% 6x read_liberty (0 sec), 1% 2x write_rtlil (0 sec), ...
+Elapsed time: 0:00.22[h:]min:sec. CPU time: user 0.20 sys 0.02 (99%). Peak memory: 72604KB.
+Log                       Ext     Elapsed/s Peak Memory/MB sha1sum result [0:20)
+1_1_yosys_canonicalize    .rtlil          0             70 d1f0bb9b33a4edf5e3a8

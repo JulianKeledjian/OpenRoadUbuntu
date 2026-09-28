@@ -1,0 +1,27 @@
+OpenROAD 26Q2-1164-g08f67ee5ec 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 12 thread(s).
+read_liberty /opt/orfs/flow/platforms/gf180/lib/gf180mcu_fd_sc_mcu9t5v0__ff_n40C_5v50.lib.gz
+read_liberty /work/results/gf180/uart-blocks_uart_rx/base/uart_rx_typ.lib
+[INFO ODB-0388] unsupported LEF58_EOLENCLOSURE property for layer Via1 :"
+  	EOLENCLOSURE 0.34 0.06 ;"
+[INFO ODB-0388] unsupported LEF58_EOLENCLOSURE property for layer Via2 :" EOLENCLOSURE 0.34 0.06 ; "
+[INFO ODB-0388] unsupported LEF58_EOLENCLOSURE property for layer Via3 :" EOLENCLOSURE 0.34 0.06 ; "
+[INFO ODB-0388] unsupported LEF58_EOLENCLOSURE property for layer Via4 :" EOLENCLOSURE 0.34 0.06 ; "
+[INFO ODB-0227] LEF file: /opt/orfs/flow/platforms/gf180/lef/gf180mcu_5LM_1TM_9K_9t_tech.lef, created 13 layers, 60 vias
+[INFO ODB-0227] LEF file: /opt/orfs/flow/platforms/gf180/lef/gf180mcu_5LM_1TM_9K_9t_sc.lef, created 229 library cells
+[INFO ODB-0227] LEF file: /work/results/gf180/uart-blocks_uart_rx/base/uart_rx.lef, created 3 vias, 1 library cells
+link_design uart
+read_sdc /work/results/gf180/uart-blocks/base/1_2_yosys.sdc
+source /opt/orfs/flow/platforms/gf180/setRC.tcl
+eliminate_dead_logic
+Removed 0 unused instances and 0 unused nets.
+Design area 58147 um^2 100% utilization.
+write_db /work/results/gf180/uart-blocks/base/1_synth.odb
+write_sdc -no_timestamp /work/results/gf180/uart-blocks/base/1_synth.sdc
+Elapsed time: 0:00.42[h:]min:sec. CPU time: user 0.40 sys 0.02 (99%). Peak memory: 132780KB.
+Log                       Ext     Elapsed/s Peak Memory/MB sha1sum result [0:20)
+1_synth                   .odb            0            129 622fd1ba53af4bd32ead
+1_synth                   .sdc                             cc350ae67527da233007

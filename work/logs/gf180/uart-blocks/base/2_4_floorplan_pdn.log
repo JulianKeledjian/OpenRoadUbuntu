@@ -1,0 +1,17 @@
+OpenROAD 26Q2-1164-g08f67ee5ec 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 12 thread(s).
+read_liberty /opt/orfs/flow/platforms/gf180/lib/gf180mcu_fd_sc_mcu9t5v0__ff_n40C_5v50.lib.gz
+read_liberty /work/results/gf180/uart-blocks_uart_rx/base/uart_rx_typ.lib
+read_db /work/results/gf180/uart-blocks/base/2_3_floorplan_tapcell.odb
+read_sdc /work/results/gf180/uart-blocks/base/2_1_floorplan.sdc
+source /opt/orfs/flow/platforms/gf180/setRC.tcl
+[INFO PDN-0001] Inserting grid: block
+[INFO PDN-0001] Inserting grid: BlocksGrid - uart_rx_inst
+Design area 60145 um^2 36% utilization.
+write_db /work/results/gf180/uart-blocks/base/2_4_floorplan_pdn.odb
+Elapsed time: 0:00.45[h:]min:sec. CPU time: user 0.43 sys 0.02 (99%). Peak memory: 140776KB.
+Log                       Ext     Elapsed/s Peak Memory/MB sha1sum result [0:20)
+2_4_floorplan_pdn         .odb            0            137 4bcd463fbe34500f1001

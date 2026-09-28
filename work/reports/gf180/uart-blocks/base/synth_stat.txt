@@ -1,0 +1,180 @@
+Found gzip magic in file `/opt/orfs/flow/platforms/gf180/lib/gf180mcu_fd_sc_mcu9t5v0__ff_n40C_5v50.lib.gz', decompressing using zlib.
+
+23. Printing statistics.
+
+=== uart ===
+
+        +----------------------------Count including submodules.
+        |        +-------------------Area including submodules.
+        |        |        +----------Local count, excluding submodules.
+        |        |        |        +-Local area, excluding submodules.
+        |        |        |        | 
+      286        -       15        - wires
+      337        -       44        - wire bits
+       55        -       15        - public wires
+      106        -       44        - public wire bits
+       23        -       15        - ports
+       74        -       44        - port bits
+        -        -        -        - memories
+        -        -        -        - memory bits
+        -        -        -        - processes
+      262 5.51E+04        1 4.39E+04 cells
+        5  239.904        -        -   gf180mcu_fd_sc_mcu9t5v0__addh_1
+       12  304.819        -        -   gf180mcu_fd_sc_mcu9t5v0__and2_2
+        1   47.981        -        -   gf180mcu_fd_sc_mcu9t5v0__and2_4
+       10  310.464        -        -   gf180mcu_fd_sc_mcu9t5v0__and3_2
+        2  112.896        -        -   gf180mcu_fd_sc_mcu9t5v0__and3_4
+        5  183.456        -        -   gf180mcu_fd_sc_mcu9t5v0__and4_2
+        9  431.827        -        -   gf180mcu_fd_sc_mcu9t5v0__aoi211_2
+       16  587.059        -        -   gf180mcu_fd_sc_mcu9t5v0__aoi21_2
+        1   22.579        -        -   gf180mcu_fd_sc_mcu9t5v0__buf_2
+        1   39.514        -        -   gf180mcu_fd_sc_mcu9t5v0__buf_4
+        2   45.158        -        -   gf180mcu_fd_sc_mcu9t5v0__clkbuf_2
+        1   73.382        -        -   gf180mcu_fd_sc_mcu9t5v0__clkbuf_8
+       15  254.016        -        -   gf180mcu_fd_sc_mcu9t5v0__clkinv_2
+       35  2963.52        -        -   gf180mcu_fd_sc_mcu9t5v0__dffq_2
+        1   16.934        -        -   gf180mcu_fd_sc_mcu9t5v0__inv_2
+       24 1.02E+03        -        -   gf180mcu_fd_sc_mcu9t5v0__mux2_2
+        1   53.626        -        -   gf180mcu_fd_sc_mcu9t5v0__mux2_4
+       20  508.032        -        -   gf180mcu_fd_sc_mcu9t5v0__nand2_2
+        3  110.074        -        -   gf180mcu_fd_sc_mcu9t5v0__nand3_2
+       11  310.464        -        -   gf180mcu_fd_sc_mcu9t5v0__nor2_2
+        7  276.595        -        -   gf180mcu_fd_sc_mcu9t5v0__nor3_2
+        4  203.213        -        -   gf180mcu_fd_sc_mcu9t5v0__nor4_2
+        1  107.251        -        -   gf180mcu_fd_sc_mcu9t5v0__nor4_4
+        1   47.981        -        -   gf180mcu_fd_sc_mcu9t5v0__oai211_2
+        6  237.082        -        -   gf180mcu_fd_sc_mcu9t5v0__oai21_2
+        1   50.803        -        -   gf180mcu_fd_sc_mcu9t5v0__oai22_2
+        6  304.819        -        -   gf180mcu_fd_sc_mcu9t5v0__oai31_2
+        7  197.568        -        -   gf180mcu_fd_sc_mcu9t5v0__or2_2
+       19  643.507        -        -   gf180mcu_fd_sc_mcu9t5v0__or3_2
+       10  395.136        -        -   gf180mcu_fd_sc_mcu9t5v0__or4_2
+        1   73.382        -        -   gf180mcu_fd_sc_mcu9t5v0__or4_4
+       17  815.674        -        -   gf180mcu_fd_sc_mcu9t5v0__xnor2_2
+        6  287.885        -        -   gf180mcu_fd_sc_mcu9t5v0__xor2_2
+        1 4.39E+04        1 4.39E+04   uart_rx
+        1 1.13E+04        1        - submodules
+        1 1.13E+04        1        -   uart_tx
+
+   Chip area for module '\uart': 55129.864600
+     of which used for sequential elements: 2963.520000 (5.38%)
+
+=== uart_tx ===
+
+        +----------------------------Count including submodules.
+        |        +-------------------Area including submodules.
+        |        |        +----------Local count, excluding submodules.
+        |        |        |        +-Local area, excluding submodules.
+        |        |        |        | 
+      271        -      271        - wires
+      293        -      293        - wire bits
+       40        -       40        - public wires
+       62        -       62        - public wire bits
+        8        -        8        - ports
+       30        -       30        - port bits
+        -        -        -        - memories
+        -        -        -        - memory bits
+        -        -        -        - processes
+      261 1.13E+04      261 1.13E+04 cells
+        5  239.904        5  239.904   gf180mcu_fd_sc_mcu9t5v0__addh_1
+       12  304.819       12  304.819   gf180mcu_fd_sc_mcu9t5v0__and2_2
+        1   47.981        1   47.981   gf180mcu_fd_sc_mcu9t5v0__and2_4
+       10  310.464       10  310.464   gf180mcu_fd_sc_mcu9t5v0__and3_2
+        2  112.896        2  112.896   gf180mcu_fd_sc_mcu9t5v0__and3_4
+        5  183.456        5  183.456   gf180mcu_fd_sc_mcu9t5v0__and4_2
+        9  431.827        9  431.827   gf180mcu_fd_sc_mcu9t5v0__aoi211_2
+       16  587.059       16  587.059   gf180mcu_fd_sc_mcu9t5v0__aoi21_2
+        1   22.579        1   22.579   gf180mcu_fd_sc_mcu9t5v0__buf_2
+        1   39.514        1   39.514   gf180mcu_fd_sc_mcu9t5v0__buf_4
+        2   45.158        2   45.158   gf180mcu_fd_sc_mcu9t5v0__clkbuf_2
+        1   73.382        1   73.382   gf180mcu_fd_sc_mcu9t5v0__clkbuf_8
+       15  254.016       15  254.016   gf180mcu_fd_sc_mcu9t5v0__clkinv_2
+       35  2963.52       35  2963.52   gf180mcu_fd_sc_mcu9t5v0__dffq_2
+        1   16.934        1   16.934   gf180mcu_fd_sc_mcu9t5v0__inv_2
+       24 1.02E+03       24 1.02E+03   gf180mcu_fd_sc_mcu9t5v0__mux2_2
+        1   53.626        1   53.626   gf180mcu_fd_sc_mcu9t5v0__mux2_4
+       20  508.032       20  508.032   gf180mcu_fd_sc_mcu9t5v0__nand2_2
+        3  110.074        3  110.074   gf180mcu_fd_sc_mcu9t5v0__nand3_2
+       11  310.464       11  310.464   gf180mcu_fd_sc_mcu9t5v0__nor2_2
+        7  276.595        7  276.595   gf180mcu_fd_sc_mcu9t5v0__nor3_2
+        4  203.213        4  203.213   gf180mcu_fd_sc_mcu9t5v0__nor4_2
+        1  107.251        1  107.251   gf180mcu_fd_sc_mcu9t5v0__nor4_4
+        1   47.981        1   47.981   gf180mcu_fd_sc_mcu9t5v0__oai211_2
+        6  237.082        6  237.082   gf180mcu_fd_sc_mcu9t5v0__oai21_2
+        1   50.803        1   50.803   gf180mcu_fd_sc_mcu9t5v0__oai22_2
+        6  304.819        6  304.819   gf180mcu_fd_sc_mcu9t5v0__oai31_2
+        7  197.568        7  197.568   gf180mcu_fd_sc_mcu9t5v0__or2_2
+       19  643.507       19  643.507   gf180mcu_fd_sc_mcu9t5v0__or3_2
+       10  395.136       10  395.136   gf180mcu_fd_sc_mcu9t5v0__or4_2
+        1   73.382        1   73.382   gf180mcu_fd_sc_mcu9t5v0__or4_4
+       17  815.674       17  815.674   gf180mcu_fd_sc_mcu9t5v0__xnor2_2
+        6  287.885        6  287.885   gf180mcu_fd_sc_mcu9t5v0__xor2_2
+
+   Chip area for module '\uart_tx': 11272.665600
+     of which used for sequential elements: 2963.520000 (26.29%)
+
+=== design hierarchy ===
+
+        +----------------------------Count including submodules.
+        |        +-------------------Area including submodules.
+        |        |        +----------Local count, excluding submodules.
+        |        |        |        +-Local area, excluding submodules.
+        |        |        |        | 
+      262 5.51E+04        1 4.39E+04 uart
+      261 1.13E+04      261 1.13E+04 uart_tx
+
+        +----------------------------Count including submodules.
+        |        +-------------------Area including submodules.
+        |        |        +----------Local count, excluding submodules.
+        |        |        |        +-Local area, excluding submodules.
+        |        |        |        | 
+      286        -       15        - wires
+      337        -       44        - wire bits
+       55        -       15        - public wires
+      106        -       44        - public wire bits
+       23        -       15        - ports
+       74        -       44        - port bits
+        -        -        -        - memories
+        -        -        -        - memory bits
+        -        -        -        - processes
+      262 5.51E+04        1 4.39E+04 cells
+        5  239.904        -        -   gf180mcu_fd_sc_mcu9t5v0__addh_1
+       12  304.819        -        -   gf180mcu_fd_sc_mcu9t5v0__and2_2
+        1   47.981        -        -   gf180mcu_fd_sc_mcu9t5v0__and2_4
+       10  310.464        -        -   gf180mcu_fd_sc_mcu9t5v0__and3_2
+        2  112.896        -        -   gf180mcu_fd_sc_mcu9t5v0__and3_4
+        5  183.456        -        -   gf180mcu_fd_sc_mcu9t5v0__and4_2
+        9  431.827        -        -   gf180mcu_fd_sc_mcu9t5v0__aoi211_2
+       16  587.059        -        -   gf180mcu_fd_sc_mcu9t5v0__aoi21_2
+        1   22.579        -        -   gf180mcu_fd_sc_mcu9t5v0__buf_2
+        1   39.514        -        -   gf180mcu_fd_sc_mcu9t5v0__buf_4
+        2   45.158        -        -   gf180mcu_fd_sc_mcu9t5v0__clkbuf_2
+        1   73.382        -        -   gf180mcu_fd_sc_mcu9t5v0__clkbuf_8
+       15  254.016        -        -   gf180mcu_fd_sc_mcu9t5v0__clkinv_2
+       35  2963.52        -        -   gf180mcu_fd_sc_mcu9t5v0__dffq_2
+        1   16.934        -        -   gf180mcu_fd_sc_mcu9t5v0__inv_2
+       24 1.02E+03        -        -   gf180mcu_fd_sc_mcu9t5v0__mux2_2
+        1   53.626        -        -   gf180mcu_fd_sc_mcu9t5v0__mux2_4
+       20  508.032        -        -   gf180mcu_fd_sc_mcu9t5v0__nand2_2
+        3  110.074        -        -   gf180mcu_fd_sc_mcu9t5v0__nand3_2
+       11  310.464        -        -   gf180mcu_fd_sc_mcu9t5v0__nor2_2
+        7  276.595        -        -   gf180mcu_fd_sc_mcu9t5v0__nor3_2
+        4  203.213        -        -   gf180mcu_fd_sc_mcu9t5v0__nor4_2
+        1  107.251        -        -   gf180mcu_fd_sc_mcu9t5v0__nor4_4
+        1   47.981        -        -   gf180mcu_fd_sc_mcu9t5v0__oai211_2
+        6  237.082        -        -   gf180mcu_fd_sc_mcu9t5v0__oai21_2
+        1   50.803        -        -   gf180mcu_fd_sc_mcu9t5v0__oai22_2
+        6  304.819        -        -   gf180mcu_fd_sc_mcu9t5v0__oai31_2
+        7  197.568        -        -   gf180mcu_fd_sc_mcu9t5v0__or2_2
+       19  643.507        -        -   gf180mcu_fd_sc_mcu9t5v0__or3_2
+       10  395.136        -        -   gf180mcu_fd_sc_mcu9t5v0__or4_2
+        1   73.382        -        -   gf180mcu_fd_sc_mcu9t5v0__or4_4
+       17  815.674        -        -   gf180mcu_fd_sc_mcu9t5v0__xnor2_2
+        6  287.885        -        -   gf180mcu_fd_sc_mcu9t5v0__xor2_2
+        1 4.39E+04        1 4.39E+04   uart_rx
+        1 1.13E+04        1        - submodules
+        1 1.13E+04        1        -   uart_tx
+
+   Chip area for top module '\uart': 55129.864600
+     of which used for sequential elements: 2963.520000 (5.38%)
+

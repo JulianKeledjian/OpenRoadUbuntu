@@ -1,0 +1,1750 @@
+{
+  "creator": "Yosys 0.64 (git sha1 8449dd470, g++ 13.3.0-6ubuntu2~24.04.1 -fPIC -O3) [the-openroad-project/yosys]",
+  "modules": {
+    "uart": {
+      "attributes": {
+        "keep_hierarchy": "00000000000000000000000000000001",
+        "hdlname": "uart",
+        "top": "00000000000000000000000000000001",
+        "src": "/opt/orfs/flow/designs/src/uart-no-param/uart.v:32.1-103.10"
+      },
+      "ports": {
+        "clk": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "rst": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "s_axis_tdata": {
+          "direction": "input",
+          "bits": [ 4, 5, 6, 7, 8, 9, 10, 11 ]
+        },
+        "s_axis_tvalid": {
+          "direction": "input",
+          "bits": [ 12 ]
+        },
+        "s_axis_tready": {
+          "direction": "output",
+          "bits": [ 13 ]
+        },
+        "m_axis_tdata": {
+          "direction": "output",
+          "bits": [ 14, 15, 16, 17, 18, 19, 20, 21 ]
+        },
+        "m_axis_tvalid": {
+          "direction": "output",
+          "bits": [ 22 ]
+        },
+        "m_axis_tready": {
+          "direction": "input",
+          "bits": [ 23 ]
+        },
+        "rxd": {
+          "direction": "input",
+          "bits": [ 24 ]
+        },
+        "txd": {
+          "direction": "output",
+          "bits": [ 25 ]
+        },
+        "tx_busy": {
+          "direction": "output",
+          "bits": [ 26 ]
+        },
+        "rx_busy": {
+          "direction": "output",
+          "bits": [ 27 ]
+        },
+        "rx_overrun_error": {
+          "direction": "output",
+          "bits": [ 28 ]
+        },
+        "rx_frame_error": {
+          "direction": "output",
+          "bits": [ 29 ]
+        },
+        "prescale": {
+          "direction": "input",
+          "bits": [ 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45 ]
+        }
+      },
+      "cells": {
+        "uart_rx_inst": {
+          "hide_name": 0,
+          "type": "uart_rx",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/opt/orfs/flow/designs/src/uart-no-param/uart.v:86.9-101.2"
+          },
+          "port_directions": {
+            "busy": "output",
+            "clk": "input",
+            "frame_error": "output",
+            "m_axis_tdata": "output",
+            "m_axis_tready": "input",
+            "m_axis_tvalid": "output",
+            "overrun_error": "output",
+            "prescale": "input",
+            "rst": "input",
+            "rxd": "input"
+          },
+          "connections": {
+            "busy": [ 27 ],
+            "clk": [ 2 ],
+            "frame_error": [ 29 ],
+            "m_axis_tdata": [ 14, 15, 16, 17, 18, 19, 20, 21 ],
+            "m_axis_tready": [ 23 ],
+            "m_axis_tvalid": [ 22 ],
+            "overrun_error": [ 28 ],
+            "prescale": [ 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45 ],
+            "rst": [ 3 ],
+            "rxd": [ 24 ]
+          }
+        },
+        "uart_tx_inst": {
+          "hide_name": 0,
+          "type": "uart_tx",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/opt/orfs/flow/designs/src/uart-no-param/uart.v:71.9-84.2"
+          },
+          "port_directions": {
+            "busy": "output",
+            "clk": "input",
+            "prescale": "input",
+            "rst": "input",
+            "s_axis_tdata": "input",
+            "s_axis_tready": "output",
+            "s_axis_tvalid": "input",
+            "txd": "output"
+          },
+          "connections": {
+            "busy": [ 26 ],
+            "clk": [ 2 ],
+            "prescale": [ 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45 ],
+            "rst": [ 3 ],
+            "s_axis_tdata": [ 4, 5, 6, 7, 8, 9, 10, 11 ],
+            "s_axis_tready": [ 13 ],
+            "s_axis_tvalid": [ 12 ],
+            "txd": [ 25 ]
+          }
+        }
+      },
+      "netnames": {
+        "clk": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "/opt/orfs/flow/designs/src/uart-no-param/uart.v:33.35-33.38"
+          }
+        },
+        "m_axis_tdata": {
+          "hide_name": 0,
+          "bits": [ 14, 15, 16, 17, 18, 19, 20, 21 ],
+          "attributes": {
+            "src": "/opt/orfs/flow/designs/src/uart-no-param/uart.v:46.26-46.38"
+          }
+        },
+        "m_axis_tready": {
+          "hide_name": 0,
+          "bits": [ 23 ],
+          "attributes": {
+            "src": "/opt/orfs/flow/designs/src/uart-no-param/uart.v:48.35-48.48"
+          }
+        },
+        "m_axis_tvalid": {
+          "hide_name": 0,
+          "bits": [ 22 ],
+          "attributes": {
+            "src": "/opt/orfs/flow/designs/src/uart-no-param/uart.v:47.35-47.48"
+          }
+        },
+        "prescale": {
+          "hide_name": 0,
+          "bits": [ 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45 ],
+          "attributes": {
+            "src": "/opt/orfs/flow/designs/src/uart-no-param/uart.v:67.35-67.43"
+          }
+        },
+        "rst": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "/opt/orfs/flow/designs/src/uart-no-param/uart.v:34.35-34.38"
+          }
+        },
+        "rx_busy": {
+          "hide_name": 0,
+          "bits": [ 27 ],
+          "attributes": {
+            "src": "/opt/orfs/flow/designs/src/uart-no-param/uart.v:60.35-60.42"
+          }
+        },
+        "rx_frame_error": {
+          "hide_name": 0,
+          "bits": [ 29 ],
+          "attributes": {
+            "src": "/opt/orfs/flow/designs/src/uart-no-param/uart.v:62.35-62.49"
+          }
+        },
+        "rx_overrun_error": {
+          "hide_name": 0,
+          "bits": [ 28 ],
+          "attributes": {
+            "src": "/opt/orfs/flow/designs/src/uart-no-param/uart.v:61.35-61.51"
+          }
+        },
+        "rxd": {
+          "hide_name": 0,
+          "bits": [ 24 ],
+          "attributes": {
+            "src": "/opt/orfs/flow/designs/src/uart-no-param/uart.v:53.35-53.38"
+          }
+        },
+        "s_axis_tdata": {
+          "hide_name": 0,
+          "bits": [ 4, 5, 6, 7, 8, 9, 10, 11 ],
+          "attributes": {
+            "src": "/opt/orfs/flow/designs/src/uart-no-param/uart.v:39.26-39.38"
+          }
+        },
+        "s_axis_tready": {
+          "hide_name": 0,
+          "bits": [ 13 ],
+          "attributes": {
+            "src": "/opt/orfs/flow/designs/src/uart-no-param/uart.v:41.35-41.48"
+          }
+        },
+        "s_axis_tvalid": {
+          "hide_name": 0,
+          "bits": [ 12 ],
+          "attributes": {
+            "src": "/opt/orfs/flow/designs/src/uart-no-param/uart.v:40.35-40.48"
+          }
+        },
+        "tx_busy": {
+          "hide_name": 0,
+          "bits": [ 26 ],
+          "attributes": {
+            "src": "/opt/orfs/flow/designs/src/uart-no-param/uart.v:59.35-59.42"
+          }
+        },
+        "txd": {
+          "hide_name": 0,
+          "bits": [ 25 ],
+          "attributes": {
+            "src": "/opt/orfs/flow/designs/src/uart-no-param/uart.v:54.35-54.38"
+          }
+        }
+      }
+    },
+    "uart_tx": {
+      "attributes": {
+        "keep_hierarchy": "00000000000000000000000000000001",
+        "hdlname": "uart_tx",
+        "src": "/opt/orfs/flow/designs/src/uart-no-param/uart_tx.v:32.1-111.10"
+      },
+      "ports": {
+        "clk": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "rst": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "s_axis_tdata": {
+          "direction": "input",
+          "bits": [ 4, 5, 6, 7, 8, 9, 10, 11 ]
+        },
+        "s_axis_tvalid": {
+          "direction": "input",
+          "bits": [ 12 ]
+        },
+        "s_axis_tready": {
+          "direction": "output",
+          "bits": [ 13 ]
+        },
+        "txd": {
+          "direction": "output",
+          "bits": [ 14 ]
+        },
+        "busy": {
+          "direction": "output",
+          "bits": [ 15 ]
+        },
+        "prescale": {
+          "direction": "input",
+          "bits": [ 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31 ]
+        }
+      },
+      "cells": {
+        "$auto$alumacc.cc:106:get_cf$2708": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/opt/orfs/flow/designs/src/uart-no-param/uart_tx.v:103.28-103.39"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 32 ],
+            "Y": [ 33 ]
+          }
+        },
+        "$auto$alumacc.cc:512:replace_alu$2705": {
+          "hide_name": 1,
+          "type": "$alu",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000100",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+            "src": "/opt/orfs/flow/designs/src/uart-no-param/uart_tx.v:103.28-103.39"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "BI": "input",
+            "CI": "input",
+            "CO": "output",
+            "X": "output",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 34, 35, 36, 37 ],
+            "B": [ "1" ],
+            "BI": [ "1" ],
+            "CI": [ "1" ],
+            "CO": [ 38, 39, 40, 32 ],
+            "X": [ 41, 42, 43, 44 ],
+            "Y": [ 45, 46, 47, 48 ]
+          }
+        },
+        "$auto$alumacc.cc:512:replace_alu$2716": {
+          "hide_name": 1,
+          "type": "$alu",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000010011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000010011"
+          },
+          "attributes": {
+            "src": "/opt/orfs/flow/designs/src/uart-no-param/uart_tx.v:100.33-100.50"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "BI": "input",
+            "CI": "input",
+            "CO": "output",
+            "X": "output",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "0", "0", "0", 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31 ],
+            "B": [ "1" ],
+            "BI": [ "1" ],
+            "CI": [ "1" ],
+            "CO": [ 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67 ],
+            "X": [ 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86 ],
+            "Y": [ 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105 ]
+          }
+        },
+        "$auto$alumacc.cc:512:replace_alu$2719": {
+          "hide_name": 1,
+          "type": "$alu",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000010011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000010011"
+          },
+          "attributes": {
+            "src": "/opt/orfs/flow/designs/src/uart-no-param/uart_tx.v:84.29-84.45"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "BI": "input",
+            "CI": "input",
+            "CO": "output",
+            "X": "output",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124 ],
+            "B": [ "1" ],
+            "BI": [ "1" ],
+            "CI": [ "1" ],
+            "CO": [ 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143 ],
+            "X": [ 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162 ],
+            "Y": [ 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181 ]
+          }
+        },
+        "$auto$alumacc.cc:82:get_gt$2712": {
+          "hide_name": 1,
+          "type": "$or",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 33 ],
+            "B": [ 182 ],
+            "Y": [ 183 ]
+          }
+        },
+        "$auto$alumacc.cc:83:get_gt$2703": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/opt/orfs/flow/designs/src/uart-no-param/uart_tx.v:82.13-82.29"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 184 ],
+            "Y": [ 185 ]
+          }
+        },
+        "$auto$alumacc.cc:83:get_gt$2714": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/opt/orfs/flow/designs/src/uart-no-param/uart_tx.v:103.28-103.39"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 183 ],
+            "Y": [ 186 ]
+          }
+        },
+        "$auto$alumacc.cc:92:get_eq$2699": {
+          "hide_name": 1,
+          "type": "$reduce_and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000010011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/opt/orfs/flow/designs/src/uart-no-param/uart_tx.v:82.13-82.29"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205 ],
+            "Y": [ 184 ]
+          }
+        },
+        "$auto$alumacc.cc:92:get_eq$2710": {
+          "hide_name": 1,
+          "type": "$reduce_and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000100",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/opt/orfs/flow/designs/src/uart-no-param/uart_tx.v:103.28-103.39"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 41, 42, 43, 44 ],
+            "Y": [ 182 ]
+          }
+        },
+        "$auto$ff.cc:337:slice$2642": {
+          "hide_name": 1,
+          "type": "$sdffe",
+          "parameters": {
+            "CLK_POLARITY": "00000000000000000000000000000001",
+            "EN_POLARITY": "00000000000000000000000000000001",
+            "SRST_POLARITY": "00000000000000000000000000000001",
+            "SRST_VALUE": "0000",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+            "src": "/opt/orfs/flow/designs/src/uart-no-param/uart_tx.v:74.1-109.4"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "D": "input",
+            "EN": "input",
+            "Q": "output",
+            "SRST": "input"
+          },
+          "connections": {
+            "CLK": [ 2 ],
+            "D": [ 206, 207, 208, 209 ],
+            "EN": [ 210 ],
+            "Q": [ 34, 35, 36, 37 ],
+            "SRST": [ 3 ]
+          }
+        },
+        "$auto$ff.cc:337:slice$2652": {
+          "hide_name": 1,
+          "type": "$sdffe",
+          "parameters": {
+            "CLK_POLARITY": "00000000000000000000000000000001",
+            "EN_POLARITY": "00000000000000000000000000000001",
+            "SRST_POLARITY": "00000000000000000000000000000001",
+            "SRST_VALUE": "1",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/opt/orfs/flow/designs/src/uart-no-param/uart_tx.v:74.1-109.4"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "D": "input",
+            "EN": "input",
+            "Q": "output",
+            "SRST": "input"
+          },
+          "connections": {
+            "CLK": [ 2 ],
+            "D": [ 211 ],
+            "EN": [ 210 ],
+            "Q": [ 14 ],
+            "SRST": [ 3 ]
+          }
+        },
+        "$auto$ff.cc:337:slice$2662": {
+          "hide_name": 1,
+          "type": "$sdffe",
+          "parameters": {
+            "CLK_POLARITY": "00000000000000000000000000000001",
+            "EN_POLARITY": "00000000000000000000000000000001",
+            "SRST_POLARITY": "00000000000000000000000000000001",
+            "SRST_VALUE": "0",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/opt/orfs/flow/designs/src/uart-no-param/uart_tx.v:74.1-109.4"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "D": "input",
+            "EN": "input",
+            "Q": "output",
+            "SRST": "input"
+          },
+          "connections": {
+            "CLK": [ 2 ],
+            "D": [ 212 ],
+            "EN": [ 213 ],
+            "Q": [ 15 ],
+            "SRST": [ 3 ]
+          }
+        },
+        "$auto$ff.cc:337:slice$2668": {
+          "hide_name": 1,
+          "type": "$sdffe",
+          "parameters": {
+            "CLK_POLARITY": "00000000000000000000000000000001",
+            "EN_POLARITY": "00000000000000000000000000000001",
+            "SRST_POLARITY": "00000000000000000000000000000001",
+            "SRST_VALUE": "0000000000000000000",
+            "WIDTH": "00000000000000000000000000010011"
+          },
+          "attributes": {
+            "src": "/opt/orfs/flow/designs/src/uart-no-param/uart_tx.v:74.1-109.4"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "D": "input",
+            "EN": "input",
+            "Q": "output",
+            "SRST": "input"
+          },
+          "connections": {
+            "CLK": [ 2 ],
+            "D": [ 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232 ],
+            "EN": [ 233 ],
+            "Q": [ 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124 ],
+            "SRST": [ 3 ]
+          }
+        },
+        "$auto$ff.cc:337:slice$2675": {
+          "hide_name": 1,
+          "type": "$dffe",
+          "parameters": {
+            "CLK_POLARITY": "00000000000000000000000000000001",
+            "EN_POLARITY": "00000000000000000000000000000001",
+            "WIDTH": "00000000000000000000000000001001"
+          },
+          "attributes": {
+            "src": "/opt/orfs/flow/designs/src/uart-no-param/uart_tx.v:74.1-109.4"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "D": "input",
+            "EN": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 2 ],
+            "D": [ 234, 235, 236, 237, 238, 239, 240, 241, 242 ],
+            "EN": [ 243 ],
+            "Q": [ 244, 245, 246, 247, 248, 249, 250, 251, 252 ]
+          }
+        },
+        "$auto$ff.cc:337:slice$2689": {
+          "hide_name": 1,
+          "type": "$sdffe",
+          "parameters": {
+            "CLK_POLARITY": "00000000000000000000000000000001",
+            "EN_POLARITY": "00000000000000000000000000000001",
+            "SRST_POLARITY": "00000000000000000000000000000001",
+            "SRST_VALUE": "0",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/opt/orfs/flow/designs/src/uart-no-param/uart_tx.v:74.1-109.4"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "D": "input",
+            "EN": "input",
+            "Q": "output",
+            "SRST": "input"
+          },
+          "connections": {
+            "CLK": [ 2 ],
+            "D": [ 253 ],
+            "EN": [ 254 ],
+            "Q": [ 13 ],
+            "SRST": [ 255 ]
+          }
+        },
+        "$auto$opt_dff.cc:235:make_patterns_logic$2654": {
+          "hide_name": 1,
+          "type": "$ne",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 12, 254 ],
+            "B": [ "0", "1" ],
+            "Y": [ 256 ]
+          }
+        },
+        "$auto$opt_dff.cc:235:make_patterns_logic$2656": {
+          "hide_name": 1,
+          "type": "$reduce_bool",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 254, 186, 182 ],
+            "Y": [ 257 ]
+          }
+        },
+        "$auto$opt_dff.cc:235:make_patterns_logic$2670": {
+          "hide_name": 1,
+          "type": "$ne",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 12, 185, 254 ],
+            "B": [ "0", "0", "1" ],
+            "Y": [ 258 ]
+          }
+        },
+        "$auto$opt_dff.cc:235:make_patterns_logic$2672": {
+          "hide_name": 1,
+          "type": "$reduce_bool",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000100",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 185, 254, 186, 182 ],
+            "Y": [ 259 ]
+          }
+        },
+        "$auto$opt_dff.cc:235:make_patterns_logic$2679": {
+          "hide_name": 1,
+          "type": "$reduce_bool",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 254, 186 ],
+            "Y": [ 260 ]
+          }
+        },
+        "$auto$opt_dff.cc:252:make_patterns_logic$2650": {
+          "hide_name": 1,
+          "type": "$reduce_and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000010101",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 257, 256 ],
+            "Y": [ 210 ]
+          }
+        },
+        "$auto$opt_dff.cc:252:make_patterns_logic$2666": {
+          "hide_name": 1,
+          "type": "$reduce_and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000010100",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 254 ],
+            "Y": [ 213 ]
+          }
+        },
+        "$auto$opt_dff.cc:252:make_patterns_logic$2674": {
+          "hide_name": 1,
+          "type": "$reduce_and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 259, 258 ],
+            "Y": [ 233 ]
+          }
+        },
+        "$auto$opt_dff.cc:252:make_patterns_logic$2685": {
+          "hide_name": 1,
+          "type": "$reduce_and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000010110",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 261, 260, 256 ],
+            "Y": [ 243 ]
+          }
+        },
+        "$auto$opt_dff.cc:277:combine_resets$2688": {
+          "hide_name": 1,
+          "type": "$reduce_or",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 185, 3 ],
+            "Y": [ 255 ]
+          }
+        },
+        "$auto$opt_dff.cc:81:create_not$2680": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 3 ],
+            "Y": [ 261 ]
+          }
+        },
+        "$auto$opt_expr.cc:1390:replace_const_cells$2722": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000010011",
+            "Y_WIDTH": "00000000000000000000000000010011"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124 ],
+            "Y": [ 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205 ]
+          }
+        },
+        "$eq$/opt/orfs/flow/designs/src/uart-no-param/uart_tx.v:85$2534": {
+          "hide_name": 1,
+          "type": "$logic_not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000100",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/opt/orfs/flow/designs/src/uart-no-param/uart_tx.v:85.22-85.34"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 34, 35, 36, 37 ],
+            "Y": [ 254 ]
+          }
+        },
+        "$logic_not$/opt/orfs/flow/designs/src/uart-no-param/uart_tx.v:90$2535": {
+          "hide_name": 1,
+          "type": "$logic_not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/opt/orfs/flow/designs/src/uart-no-param/uart_tx.v:90.38-90.56"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 13 ],
+            "Y": [ 262 ]
+          }
+        },
+        "$procmux$2552": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000001001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/opt/orfs/flow/designs/src/uart-no-param/uart_tx.v:98.17-98.28|/opt/orfs/flow/designs/src/uart-no-param/uart_tx.v:98.13-106.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 245, 246, 247, 248, 249, 250, 251, 252, "0" ],
+            "B": [ "x", "x", "x", "x", "x", "x", "x", "x", "x" ],
+            "S": [ 183 ],
+            "Y": [ 263, 264, 265, 266, 267, 268, 269, 270, 271 ]
+          }
+        },
+        "$procmux$2555": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000001001"
+          },
+          "attributes": {
+            "src": "/opt/orfs/flow/designs/src/uart-no-param/uart_tx.v:89.17-89.30|/opt/orfs/flow/designs/src/uart-no-param/uart_tx.v:89.13-96.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x", "x", "x", "x", "x", "x", "x", "x", "x" ],
+            "B": [ 4, 5, 6, 7, 8, 9, 10, 11, "1" ],
+            "S": [ 12 ],
+            "Y": [ 272, 273, 274, 275, 276, 277, 278, 279, 280 ]
+          }
+        },
+        "$procmux$2557": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000001001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/opt/orfs/flow/designs/src/uart-no-param/uart_tx.v:85.22-85.34|/opt/orfs/flow/designs/src/uart-no-param/uart_tx.v:85.18-107.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 263, 264, 265, 266, 267, 268, 269, 270, 271 ],
+            "B": [ 272, 273, 274, 275, 276, 277, 278, 279, 280 ],
+            "S": [ 254 ],
+            "Y": [ 234, 235, 236, 237, 238, 239, 240, 241, 242 ]
+          }
+        },
+        "$procmux$2565": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000010011"
+          },
+          "attributes": {
+            "src": "/opt/orfs/flow/designs/src/uart-no-param/uart_tx.v:102.26-102.38|/opt/orfs/flow/designs/src/uart-no-param/uart_tx.v:102.22-106.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x" ],
+            "B": [ "0", "0", "0", 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31 ],
+            "S": [ 182 ],
+            "Y": [ 281, 282, 283, 284, 285, 286, 287, 288, 289, 290, 291, 292, 293, 294, 295, 296, 297, 298, 299 ]
+          }
+        },
+        "$procmux$2568": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000010011"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/opt/orfs/flow/designs/src/uart-no-param/uart_tx.v:98.17-98.28|/opt/orfs/flow/designs/src/uart-no-param/uart_tx.v:98.13-106.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105 ],
+            "B": [ 281, 282, 283, 284, 285, 286, 287, 288, 289, 290, 291, 292, 293, 294, 295, 296, 297, 298, 299 ],
+            "S": [ 183 ],
+            "Y": [ 300, 301, 302, 303, 304, 305, 306, 307, 308, 309, 310, 311, 312, 313, 314, 315, 316, 317, 318 ]
+          }
+        },
+        "$procmux$2571": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000010011"
+          },
+          "attributes": {
+            "src": "/opt/orfs/flow/designs/src/uart-no-param/uart_tx.v:89.17-89.30|/opt/orfs/flow/designs/src/uart-no-param/uart_tx.v:89.13-96.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x" ],
+            "B": [ 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105 ],
+            "S": [ 12 ],
+            "Y": [ 319, 320, 321, 322, 323, 324, 325, 326, 327, 328, 329, 330, 331, 332, 333, 334, 335, 336, 337 ]
+          }
+        },
+        "$procmux$2573": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000010011"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/opt/orfs/flow/designs/src/uart-no-param/uart_tx.v:85.22-85.34|/opt/orfs/flow/designs/src/uart-no-param/uart_tx.v:85.18-107.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 300, 301, 302, 303, 304, 305, 306, 307, 308, 309, 310, 311, 312, 313, 314, 315, 316, 317, 318 ],
+            "B": [ 319, 320, 321, 322, 323, 324, 325, 326, 327, 328, 329, 330, 331, 332, 333, 334, 335, 336, 337 ],
+            "S": [ 254 ],
+            "Y": [ 338, 339, 340, 341, 342, 343, 344, 345, 346, 347, 348, 349, 350, 351, 352, 353, 354, 355, 356 ]
+          }
+        },
+        "$procmux$2576": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000010011"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/opt/orfs/flow/designs/src/uart-no-param/uart_tx.v:82.13-82.29|/opt/orfs/flow/designs/src/uart-no-param/uart_tx.v:82.9-107.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181 ],
+            "B": [ 338, 339, 340, 341, 342, 343, 344, 345, 346, 347, 348, 349, 350, 351, 352, 353, 354, 355, 356 ],
+            "S": [ 184 ],
+            "Y": [ 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232 ]
+          }
+        },
+        "$procmux$2581": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/opt/orfs/flow/designs/src/uart-no-param/uart_tx.v:102.26-102.38|/opt/orfs/flow/designs/src/uart-no-param/uart_tx.v:102.22-106.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x" ],
+            "B": [ "1" ],
+            "S": [ 182 ],
+            "Y": [ 357 ]
+          }
+        },
+        "$procmux$2584": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/opt/orfs/flow/designs/src/uart-no-param/uart_tx.v:98.17-98.28|/opt/orfs/flow/designs/src/uart-no-param/uart_tx.v:98.13-106.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 244 ],
+            "B": [ 357 ],
+            "S": [ 183 ],
+            "Y": [ 358 ]
+          }
+        },
+        "$procmux$2587": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/opt/orfs/flow/designs/src/uart-no-param/uart_tx.v:89.17-89.30|/opt/orfs/flow/designs/src/uart-no-param/uart_tx.v:89.13-96.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x" ],
+            "B": [ "0" ],
+            "S": [ 12 ],
+            "Y": [ 359 ]
+          }
+        },
+        "$procmux$2589": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/opt/orfs/flow/designs/src/uart-no-param/uart_tx.v:85.22-85.34|/opt/orfs/flow/designs/src/uart-no-param/uart_tx.v:85.18-107.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 358 ],
+            "B": [ 359 ],
+            "S": [ 254 ],
+            "Y": [ 211 ]
+          }
+        },
+        "$procmux$2598": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/opt/orfs/flow/designs/src/uart-no-param/uart_tx.v:89.17-89.30|/opt/orfs/flow/designs/src/uart-no-param/uart_tx.v:89.13-96.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "0" ],
+            "B": [ "1" ],
+            "S": [ 12 ],
+            "Y": [ 212 ]
+          }
+        },
+        "$procmux$2608": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+            "src": "/opt/orfs/flow/designs/src/uart-no-param/uart_tx.v:102.26-102.38|/opt/orfs/flow/designs/src/uart-no-param/uart_tx.v:102.22-106.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x", "x", "x", "x" ],
+            "B": [ 45, 46, 47, 48 ],
+            "S": [ 182 ],
+            "Y": [ 360, 361, 362, 363 ]
+          }
+        },
+        "$procmux$2611": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/opt/orfs/flow/designs/src/uart-no-param/uart_tx.v:98.17-98.28|/opt/orfs/flow/designs/src/uart-no-param/uart_tx.v:98.13-106.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 45, 46, 47, 48 ],
+            "B": [ 360, 361, 362, 363 ],
+            "S": [ 183 ],
+            "Y": [ 364, 365, 366, 367 ]
+          }
+        },
+        "$procmux$2614": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+            "src": "/opt/orfs/flow/designs/src/uart-no-param/uart_tx.v:89.17-89.30|/opt/orfs/flow/designs/src/uart-no-param/uart_tx.v:89.13-96.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x", "x", "x", "x" ],
+            "B": [ "1", "0", "0", "1" ],
+            "S": [ 12 ],
+            "Y": [ 368, 369, 370, 371 ]
+          }
+        },
+        "$procmux$2616": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/opt/orfs/flow/designs/src/uart-no-param/uart_tx.v:85.22-85.34|/opt/orfs/flow/designs/src/uart-no-param/uart_tx.v:85.18-107.12"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 364, 365, 366, 367 ],
+            "B": [ 368, 369, 370, 371 ],
+            "S": [ 254 ],
+            "Y": [ 206, 207, 208, 209 ]
+          }
+        },
+        "$procmux$2625": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/opt/orfs/flow/designs/src/uart-no-param/uart_tx.v:89.17-89.30|/opt/orfs/flow/designs/src/uart-no-param/uart_tx.v:89.13-96.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "1" ],
+            "B": [ 262 ],
+            "S": [ 12 ],
+            "Y": [ 253 ]
+          }
+        }
+      },
+      "netnames": {
+        "$auto$alumacc.cc:528:replace_alu$2695": {
+          "hide_name": 1,
+          "bits": [ 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205 ],
+          "attributes": {
+          }
+        },
+        "$auto$alumacc.cc:528:replace_alu$2706": {
+          "hide_name": 1,
+          "bits": [ 41, 42, 43, 44 ],
+          "attributes": {
+          }
+        },
+        "$auto$alumacc.cc:528:replace_alu$2717": {
+          "hide_name": 1,
+          "bits": [ 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86 ],
+          "attributes": {
+            "unused_bits": "0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18"
+          }
+        },
+        "$auto$alumacc.cc:528:replace_alu$2720": {
+          "hide_name": 1,
+          "bits": [ 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162 ],
+          "attributes": {
+            "unused_bits": "0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18"
+          }
+        },
+        "$auto$alumacc.cc:529:replace_alu$2707": {
+          "hide_name": 1,
+          "bits": [ 38, 39, 40, 32 ],
+          "attributes": {
+            "unused_bits": "0 1 2"
+          }
+        },
+        "$auto$alumacc.cc:529:replace_alu$2718": {
+          "hide_name": 1,
+          "bits": [ 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67 ],
+          "attributes": {
+            "unused_bits": "0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18"
+          }
+        },
+        "$auto$alumacc.cc:529:replace_alu$2721": {
+          "hide_name": 1,
+          "bits": [ 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143 ],
+          "attributes": {
+            "unused_bits": "0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18"
+          }
+        },
+        "$auto$opt_dff.cc:234:make_patterns_logic$2643": {
+          "hide_name": 1,
+          "bits": [ 256 ],
+          "attributes": {
+          }
+        },
+        "$auto$opt_dff.cc:234:make_patterns_logic$2645": {
+          "hide_name": 1,
+          "bits": [ 257 ],
+          "attributes": {
+          }
+        },
+        "$auto$opt_dff.cc:234:make_patterns_logic$2669": {
+          "hide_name": 1,
+          "bits": [ 258 ],
+          "attributes": {
+          }
+        },
+        "$auto$opt_dff.cc:234:make_patterns_logic$2671": {
+          "hide_name": 1,
+          "bits": [ 259 ],
+          "attributes": {
+          }
+        },
+        "$auto$opt_dff.cc:234:make_patterns_logic$2678": {
+          "hide_name": 1,
+          "bits": [ 260 ],
+          "attributes": {
+          }
+        },
+        "$auto$opt_dff.cc:251:make_patterns_logic$2649": {
+          "hide_name": 1,
+          "bits": [ 210 ],
+          "attributes": {
+          }
+        },
+        "$auto$opt_dff.cc:251:make_patterns_logic$2665": {
+          "hide_name": 1,
+          "bits": [ 213 ],
+          "attributes": {
+          }
+        },
+        "$auto$opt_dff.cc:251:make_patterns_logic$2673": {
+          "hide_name": 1,
+          "bits": [ 233 ],
+          "attributes": {
+          }
+        },
+        "$auto$opt_dff.cc:251:make_patterns_logic$2684": {
+          "hide_name": 1,
+          "bits": [ 243 ],
+          "attributes": {
+          }
+        },
+        "$auto$opt_dff.cc:275:combine_resets$2687": {
+          "hide_name": 1,
+          "bits": [ 255 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:3255:Not$2648": {
+          "hide_name": 1,
+          "bits": [ 184 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:3255:Not$2681": {
+          "hide_name": 1,
+          "bits": [ 261 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:3255:Not$2704": {
+          "hide_name": 1,
+          "bits": [ 185 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:3255:Not$2709": {
+          "hide_name": 1,
+          "bits": [ 33 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:3255:Not$2715": {
+          "hide_name": 1,
+          "bits": [ 186 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:3258:ReduceAnd$2711": {
+          "hide_name": 1,
+          "bits": [ 182 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:3303:Or$2713": {
+          "hide_name": 1,
+          "bits": [ 183 ],
+          "attributes": {
+          }
+        },
+        "$auto$wreduce.cc:514:run$2690": {
+          "hide_name": 1,
+          "bits": [ 45, 46, 47, 48 ],
+          "attributes": {
+          }
+        },
+        "$auto$wreduce.cc:514:run$2691": {
+          "hide_name": 1,
+          "bits": [ 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105 ],
+          "attributes": {
+          }
+        },
+        "$auto$wreduce.cc:514:run$2692": {
+          "hide_name": 1,
+          "bits": [ 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181 ],
+          "attributes": {
+          }
+        },
+        "$eq$/opt/orfs/flow/designs/src/uart-no-param/uart_tx.v:85$2534_Y": {
+          "hide_name": 1,
+          "bits": [ 254 ],
+          "attributes": {
+            "src": "/opt/orfs/flow/designs/src/uart-no-param/uart_tx.v:85.22-85.34"
+          }
+        },
+        "$logic_not$/opt/orfs/flow/designs/src/uart-no-param/uart_tx.v:90$2535_Y": {
+          "hide_name": 1,
+          "bits": [ 262 ],
+          "attributes": {
+            "src": "/opt/orfs/flow/designs/src/uart-no-param/uart_tx.v:90.38-90.56"
+          }
+        },
+        "$procmux$2552_Y": {
+          "hide_name": 1,
+          "bits": [ 263, 264, 265, 266, 267, 268, 269, 270, 271 ],
+          "attributes": {
+          }
+        },
+        "$procmux$2555_Y": {
+          "hide_name": 1,
+          "bits": [ 272, 273, 274, 275, 276, 277, 278, 279, 280 ],
+          "attributes": {
+          }
+        },
+        "$procmux$2557_Y": {
+          "hide_name": 1,
+          "bits": [ 234, 235, 236, 237, 238, 239, 240, 241, 242 ],
+          "attributes": {
+          }
+        },
+        "$procmux$2565_Y": {
+          "hide_name": 1,
+          "bits": [ 281, 282, 283, 284, 285, 286, 287, 288, 289, 290, 291, 292, 293, 294, 295, 296, 297, 298, 299 ],
+          "attributes": {
+          }
+        },
+        "$procmux$2568_Y": {
+          "hide_name": 1,
+          "bits": [ 300, 301, 302, 303, 304, 305, 306, 307, 308, 309, 310, 311, 312, 313, 314, 315, 316, 317, 318 ],
+          "attributes": {
+          }
+        },
+        "$procmux$2571_Y": {
+          "hide_name": 1,
+          "bits": [ 319, 320, 321, 322, 323, 324, 325, 326, 327, 328, 329, 330, 331, 332, 333, 334, 335, 336, 337 ],
+          "attributes": {
+          }
+        },
+        "$procmux$2573_Y": {
+          "hide_name": 1,
+          "bits": [ 338, 339, 340, 341, 342, 343, 344, 345, 346, 347, 348, 349, 350, 351, 352, 353, 354, 355, 356 ],
+          "attributes": {
+          }
+        },
+        "$procmux$2576_Y": {
+          "hide_name": 1,
+          "bits": [ 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232 ],
+          "attributes": {
+          }
+        },
+        "$procmux$2581_Y": {
+          "hide_name": 1,
+          "bits": [ 357 ],
+          "attributes": {
+          }
+        },
+        "$procmux$2584_Y": {
+          "hide_name": 1,
+          "bits": [ 358 ],
+          "attributes": {
+          }
+        },
+        "$procmux$2587_Y": {
+          "hide_name": 1,
+          "bits": [ 359 ],
+          "attributes": {
+          }
+        },
+        "$procmux$2589_Y": {
+          "hide_name": 1,
+          "bits": [ 211 ],
+          "attributes": {
+          }
+        },
+        "$procmux$2598_Y": {
+          "hide_name": 1,
+          "bits": [ 212 ],
+          "attributes": {
+          }
+        },
+        "$procmux$2608_Y": {
+          "hide_name": 1,
+          "bits": [ 360, 361, 362, 363 ],
+          "attributes": {
+          }
+        },
+        "$procmux$2611_Y": {
+          "hide_name": 1,
+          "bits": [ 364, 365, 366, 367 ],
+          "attributes": {
+          }
+        },
+        "$procmux$2614_Y": {
+          "hide_name": 1,
+          "bits": [ 368, 369, 370, 371 ],
+          "attributes": {
+          }
+        },
+        "$procmux$2616_Y": {
+          "hide_name": 1,
+          "bits": [ 206, 207, 208, 209 ],
+          "attributes": {
+          }
+        },
+        "$procmux$2625_Y": {
+          "hide_name": 1,
+          "bits": [ 253 ],
+          "attributes": {
+          }
+        },
+        "bit_cnt": {
+          "hide_name": 0,
+          "bits": [ 34, 35, 36, 37 ],
+          "attributes": {
+            "init": "0000",
+            "src": "/opt/orfs/flow/designs/src/uart-no-param/uart_tx.v:67.11-67.18"
+          }
+        },
+        "busy": {
+          "hide_name": 0,
+          "bits": [ 15 ],
+          "attributes": {
+            "src": "/opt/orfs/flow/designs/src/uart-no-param/uart_tx.v:51.35-51.39"
+          }
+        },
+        "busy_reg": {
+          "hide_name": 0,
+          "bits": [ 15 ],
+          "attributes": {
+            "init": "0",
+            "src": "/opt/orfs/flow/designs/src/uart-no-param/uart_tx.v:63.5-63.13"
+          }
+        },
+        "clk": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "/opt/orfs/flow/designs/src/uart-no-param/uart_tx.v:33.35-33.38"
+          }
+        },
+        "data_reg": {
+          "hide_name": 0,
+          "bits": [ 244, 245, 246, 247, 248, 249, 250, 251, 252 ],
+          "attributes": {
+            "init": "000000000",
+            "src": "/opt/orfs/flow/designs/src/uart-no-param/uart_tx.v:65.11-65.19"
+          }
+        },
+        "prescale": {
+          "hide_name": 0,
+          "bits": [ 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31 ],
+          "attributes": {
+            "src": "/opt/orfs/flow/designs/src/uart-no-param/uart_tx.v:56.35-56.43"
+          }
+        },
+        "prescale_reg": {
+          "hide_name": 0,
+          "bits": [ 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124 ],
+          "attributes": {
+            "init": "0000000000000000000",
+            "src": "/opt/orfs/flow/designs/src/uart-no-param/uart_tx.v:66.12-66.24"
+          }
+        },
+        "rst": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "/opt/orfs/flow/designs/src/uart-no-param/uart_tx.v:34.35-34.38"
+          }
+        },
+        "s_axis_tdata": {
+          "hide_name": 0,
+          "bits": [ 4, 5, 6, 7, 8, 9, 10, 11 ],
+          "attributes": {
+            "src": "/opt/orfs/flow/designs/src/uart-no-param/uart_tx.v:39.26-39.38"
+          }
+        },
+        "s_axis_tready": {
+          "hide_name": 0,
+          "bits": [ 13 ],
+          "attributes": {
+            "src": "/opt/orfs/flow/designs/src/uart-no-param/uart_tx.v:41.35-41.48"
+          }
+        },
+        "s_axis_tready_reg": {
+          "hide_name": 0,
+          "bits": [ 13 ],
+          "attributes": {
+            "init": "0",
+            "src": "/opt/orfs/flow/designs/src/uart-no-param/uart_tx.v:59.5-59.22"
+          }
+        },
+        "s_axis_tvalid": {
+          "hide_name": 0,
+          "bits": [ 12 ],
+          "attributes": {
+            "src": "/opt/orfs/flow/designs/src/uart-no-param/uart_tx.v:40.35-40.48"
+          }
+        },
+        "txd": {
+          "hide_name": 0,
+          "bits": [ 14 ],
+          "attributes": {
+            "src": "/opt/orfs/flow/designs/src/uart-no-param/uart_tx.v:46.35-46.38"
+          }
+        },
+        "txd_reg": {
+          "hide_name": 0,
+          "bits": [ 14 ],
+          "attributes": {
+            "init": "1",
+            "src": "/opt/orfs/flow/designs/src/uart-no-param/uart_tx.v:61.5-61.12"
+          }
+        }
+      }
+    }
+  }
+}

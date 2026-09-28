@@ -1,0 +1,30 @@
+OpenROAD 26Q2-1164-g08f67ee5ec 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 12 thread(s).
+read_liberty /opt/orfs/flow/platforms/gf180/lib/gf180mcu_fd_sc_mcu9t5v0__ff_n40C_5v50.lib.gz
+read_liberty /work/results/gf180/uart-blocks_uart_rx/base/uart_rx_typ.lib
+read_db /work/results/gf180/uart-blocks/base/2_1_floorplan.odb
+read_sdc /work/results/gf180/uart-blocks/base/2_1_floorplan.sdc
+source /opt/orfs/flow/platforms/gf180/setRC.tcl
+rtl_macro_placer -max_num_level 2 -halo_width 20 -halo_height 20 -min_ar 0.33 -area_weight 0.1 -wirelength_weight 100.0 -outline_weight 100.0 -boundary_weight 50.0 -notch_weight 50.0 -report_directory /work/objects/gf180/uart-blocks/base/rtlmp -fence_lx 0.0 -fence_ly 0.0 -fence_ux 0.0 -fence_uy 0.0 -target_util 0.6
+[WARNING MPL-0074] -halo_width/-halo_height are deprecated, use the set_macro_base_halo command instead.
+Die Area: (0.00, 0.00) (430.00, 430.00),  Floorplan Area: (10.08, 10.08) (420.00, 418.32)
+	Number of std cell instances: 261
+	Area of std cell instances: 11272.67
+	Number of macros: 1
+	Area of macros: 46874.42
+	Base halo (L, B, R, T): (20.00, 20.00, 20.00, 20.00)
+	Area of macros with halos: 65794.82
+	Area of std cell instances + Area of macros: 58147.08
+	Floorplan area: 167345.74
+	Design Utilization: 0.35
+	Floorplan Utilization: 0.09
+	Manufacturing Grid: 10
+
+Design area 58147 um^2 35% utilization.
+write_db /work/results/gf180/uart-blocks/base/2_2_floorplan_macro.odb
+Elapsed time: 0:01.74[h:]min:sec. CPU time: user 11.51 sys 0.03 (662%). Peak memory: 134056KB.
+Log                       Ext     Elapsed/s Peak Memory/MB sha1sum result [0:20)
+2_2_floorplan_macro       .odb            1            130 9a87beb49839ee5e2ac9

@@ -1,0 +1,65 @@
+OpenROAD 26Q2-1164-g08f67ee5ec 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 12 thread(s).
+read_liberty /opt/orfs/flow/platforms/gf180/lib/gf180mcu_fd_sc_mcu9t5v0__ff_n40C_5v50.lib.gz
+read_liberty /work/results/gf180/uart-blocks_uart_rx/base/uart_rx_typ.lib
+read_db /work/results/gf180/uart-blocks/base/3_3_place_gp.odb
+read_sdc /work/results/gf180/uart-blocks/base/2_floorplan.sdc
+source /opt/orfs/flow/platforms/gf180/setRC.tcl
+estimate_parasitics -placement
+Perform buffer insertion and gate resizing...
+repair_design -verbose
+Iteration |   Area    | Resized | Buffers | Nets repaired | Remaining
+---------------------------------------------------------------------
+        0 |     +0.0% |       0 |       0 |             0 |       346
+       10 |     +0.0% |       0 |       0 |             0 |       336
+       20 |     +0.0% |       0 |       0 |             0 |       326
+       30 |     +0.0% |       0 |       0 |             0 |       316
+       40 |     +0.0% |       0 |       0 |             0 |       306
+       50 |     +0.0% |       0 |       0 |             0 |       296
+       60 |     +0.0% |       0 |       0 |             0 |       286
+       70 |     +0.0% |       0 |       0 |             0 |       276
+       80 |     +0.0% |       0 |       0 |             0 |       266
+       90 |     +0.0% |       0 |       0 |             0 |       256
+      100 |     +0.0% |       0 |       0 |             0 |       246
+      110 |     +0.0% |       0 |       0 |             0 |       236
+      120 |     +0.0% |       0 |       0 |             0 |       226
+      130 |     +0.0% |       0 |       0 |             0 |       216
+      140 |     +0.0% |       0 |       0 |             0 |       206
+      150 |     +0.0% |       0 |       0 |             0 |       196
+      160 |     +0.0% |       0 |       0 |             0 |       186
+      170 |     +0.0% |       0 |       0 |             0 |       176
+      180 |     +0.0% |       0 |       0 |             0 |       166
+      190 |     +0.0% |       0 |       0 |             0 |       156
+      200 |     +0.0% |       0 |       0 |             0 |       146
+      210 |     +0.0% |       0 |       0 |             0 |       136
+      220 |     +0.0% |       0 |       0 |             0 |       126
+      230 |     +0.0% |       0 |       0 |             0 |       116
+      240 |     +0.0% |       0 |       0 |             0 |       106
+      250 |     +0.0% |       0 |       0 |             0 |        96
+      260 |     +0.0% |       0 |       0 |             0 |        86
+      270 |     +0.0% |       0 |       0 |             0 |        76
+      280 |     +0.0% |       0 |       0 |             0 |        66
+      290 |     +0.0% |       0 |       0 |             0 |        56
+      300 |     +0.0% |       0 |       0 |             0 |        46
+      310 |     +0.0% |       0 |       0 |             0 |        36
+      320 |     +0.0% |       0 |       0 |             0 |        26
+      330 |     +0.0% |       0 |       0 |             0 |        16
+      340 |     +0.0% |       0 |       0 |             0 |         6
+    final |     +0.0% |       0 |       0 |             0 |         0
+---------------------------------------------------------------------
+Floating nets: 
+Report metrics stage 3, resizer...
+
+==========================================================================
+resizer report_design_area
+--------------------------------------------------------------------------
+Design area 61825 um^2 37% utilization.
+Instance count before 655, after 655
+Pin count before 1041, after 1041
+write_db /work/results/gf180/uart-blocks/base/3_4_place_resized.odb
+Elapsed time: 0:00.50[h:]min:sec. CPU time: user 0.51 sys 0.06 (112%). Peak memory: 152480KB.
+Log                       Ext     Elapsed/s Peak Memory/MB sha1sum result [0:20)
+3_4_place_resized         .odb            0            148 c5372cd05165a479991b

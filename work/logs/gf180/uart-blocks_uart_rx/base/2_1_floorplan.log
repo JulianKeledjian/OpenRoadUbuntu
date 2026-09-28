@@ -1,0 +1,69 @@
+OpenROAD 26Q2-1164-g08f67ee5ec 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 12 thread(s).
+read_liberty /opt/orfs/flow/platforms/gf180/lib/gf180mcu_fd_sc_mcu9t5v0__ff_n40C_5v50.lib.gz
+read_db /work/results/gf180/uart-blocks_uart_rx/base/1_synth.odb
+read_sdc /work/results/gf180/uart-blocks_uart_rx/base/1_synth.sdc
+source /opt/orfs/flow/platforms/gf180/setRC.tcl
+
+==========================================================================
+Floorplan check_setup
+--------------------------------------------------------------------------
+number instances in verilog is 306
+[INFO IFP-0107] Defining die area using utilization: 30.00% and aspect ratio: 1.
+[WARNING IFP-0028] Core area lower left (2.000, 2.000) snapped to (2.240, 5.040).
+[INFO IFP-0001] Added 41 rows of 379 site GF018hv5v_green_sc9.
+[INFO IFP-0100] Die BBox:  (  0.000  0.000 ) ( 216.505 216.505 ) um
+[INFO IFP-0101] Core BBox: (  2.240  5.040 ) ( 214.480 211.680 ) um
+[INFO IFP-0102] Core area:                        43857.274 um^2
+[INFO IFP-0103] Total instances area:             13547.520 um^2
+[INFO IFP-0104] Effective utilization:                0.309
+[INFO IFP-0105] Number of instances:                    306
+source /opt/orfs/flow/platforms/gf180/fastroute.tcl
+Repair tie lo fanout...
+Repair tie hi fanout...
+repair_timing -setup_margin 0 -hold_margin 0 -repair_tns 100 -setup -skip_last_gasp -sequence unbuffer,sizeup,swap,vt_swap -verbose
+[WARNING EST-0027] no estimated parasitics. Using wire load models.
+[INFO RSZ-0100] Repair move sequence: UnbufferMove SizeUpMove SwapPinsMove 
+[INFO RSZ-0098] No setup violations found
+Default units for flow
+ time 1ns
+ capacitance 1pF
+ resistance 1ohm
+ voltage 1v
+ current 1mA
+ power 1uW
+ distance 1um
+   Layer   | Unit Resistance | Unit Capacitance 
+           |        (ohm/um) |          (pF/um)
+------------------------------------------------
+    Metal1 |        3.91e-01 |         9.06e-06
+    Metal2 |        2.26e-04 |         1.35e-04
+    Metal3 |        2.26e-04 |         1.46e-04
+    Metal4 |        2.26e-04 |         1.51e-04
+    Metal5 |        5.86e-05 |         1.56e-04
+------------------------------------------------
+
+   Layer   | Via Resistance 
+           |          (ohm) 
+----------------------------
+      Via1 |       4.23e+00 
+      Via2 |       4.23e+00 
+      Via3 |       4.23e+00 
+      Via4 |       4.23e+00 
+----------------------------
+Report metrics stage 2, floorplan final...
+
+==========================================================================
+floorplan final report_design_area
+--------------------------------------------------------------------------
+Design area 13548 um^2 31% utilization.
+source /opt/orfs/flow/designs/gf180/uart-blocks/uart_rx/io.tcl
+write_db /work/results/gf180/uart-blocks_uart_rx/base/2_1_floorplan.odb
+write_sdc -no_timestamp /work/results/gf180/uart-blocks_uart_rx/base/2_1_floorplan.sdc
+Elapsed time: 0:00.48[h:]min:sec. CPU time: user 0.45 sys 0.04 (102%). Peak memory: 154336KB.
+Log                       Ext     Elapsed/s Peak Memory/MB sha1sum result [0:20)
+2_1_floorplan             .odb            0            150 2f39445039062895dcc7
+2_1_floorplan             .sdc                             2ad2fc59a2d43c7b7aff

@@ -1,0 +1,76 @@
+OpenROAD 26Q2-1164-g08f67ee5ec 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 12 thread(s).
+read_liberty /opt/orfs/flow/platforms/gf180/lib/gf180mcu_fd_sc_mcu9t5v0__ff_n40C_5v50.lib.gz
+read_liberty /work/results/gf180/uart-blocks_uart_rx/base/uart_rx_typ.lib
+read_db /work/results/gf180/uart-blocks/base/6_1_fill.odb
+read_sdc /work/results/gf180/uart-blocks/base/6_1_fill.sdc
+source /opt/orfs/flow/platforms/gf180/setRC.tcl
+[WARNING STA-0450] virtual clock vclk_clk can not be propagated.
+write_db /work/results/gf180/uart-blocks/base/6_final.odb
+Deleted 0 routing obstructions
+[INFO RCX-0431] Defined process_corner X with ext_model_index 0
+[INFO RCX-0029] Defined extraction corner X
+[INFO RCX-0435] Reading extraction model file /opt/orfs/flow/platforms/gf180/openROAD/rcx/gf180mcu_1p5m_1tm_9k_sp_smim_OPTB_bst.rules ...
+[INFO RCX-0436] RC segment generation uart (max_merge_res 50.0) ...
+[INFO RCX-0040] Final 1161 rc segments
+[INFO RCX-0439] Coupling Cap extraction uart ...
+[INFO RCX-0440] Coupling threshhold is 0.1000 fF, coupling capacitance less than 0.1000 fF will be grounded.
+[INFO RCX-0442] 48% of 2724 wires extracted
+[INFO RCX-0442] 100% of 2724 wires extracted
+[INFO RCX-0045] Extract 355 nets, 1514 rsegs, 1514 caps, 2735 ccs
+[INFO RCX-0443] 355 nets finished
+[INFO PSM-0040] All shapes on net VDD are connected.
+[INFO PSM-0073] Using bump pattern with x-pitch 140.0000um, y-pitch 140.0000um, and size 70.0000um with an reduction factor of 3x.
+########## IR report #################
+Net              : VDD
+Corner           : default
+Total power      : 4.03e-02 W
+Supply voltage   : 5.50e+00 V
+Worstcase voltage: 5.50e+00 V
+Average voltage  : 5.50e+00 V
+Average IR drop  : 1.89e-04 V
+Worstcase IR drop: 5.51e-04 V
+Percentage drop  : 0.01 %
+######################################
+[INFO PSM-0040] All shapes on net VSS are connected.
+[INFO PSM-0073] Using bump pattern with x-pitch 140.0000um, y-pitch 140.0000um, and size 70.0000um with an reduction factor of 3x.
+########## IR report #################
+Net              : VSS
+Corner           : default
+Total power      : 4.03e-02 W
+Supply voltage   : 0.00e+00 V
+Worstcase voltage: 4.49e-04 V
+Average voltage  : 1.55e-04 V
+Average IR drop  : 1.55e-04 V
+Worstcase IR drop: 4.49e-04 V
+Percentage drop  : 0.01 %
+######################################
+Cell type report:                       Count       Area
+  Macro                                     1   46874.42
+  Endcap cell                             260    1467.65
+  Fill cell                              1313   91053.45
+  Tap cell                                 94     530.61
+  Clock buffer                             11     739.47
+  Timing Repair Buffer                     44    1859.96
+  Inverter                                 16     270.95
+  Clock inverter                            1      28.22
+  Sequential cell                          35    2963.52
+  Multi-Input combinational cell          205    7857.56
+  Total                                  1980  153645.81
+Report metrics stage 6, finish...
+
+==========================================================================
+finish report_design_area
+--------------------------------------------------------------------------
+Design area 62592 um^2 37% utilization.
+[WARNING GUI-0076] QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-designer'
+amdgpu: os_same_file_description couldn't determine if two DRM fds reference the same file description.
+If they do, bad things may happen!
+[WARNING GUI-0066] Heat map "IR Drop" has not been populated with data.
+[WARNING GUI-0066] Heat map "Routing Congestion" has not been populated with data.
+Elapsed time: 0:01.43[h:]min:sec. CPU time: user 1.40 sys 0.23 (114%). Peak memory: 279108KB.
+Log                       Ext     Elapsed/s Peak Memory/MB sha1sum result [0:20)
+6_report                                  1            272                  N/A
